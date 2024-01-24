@@ -6,11 +6,11 @@
 .left_container {
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 10;
-    -fx-effect: dropshadow(two-gass-box, #AAAAAA, 5, 0, 0, 4);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 5, 0, 0, 4);
 }
 /* Title/Logo Section */
 .tittle_container {
-    -fx-background-color: #FFFFFF;
+    -fx-background-color: #ffffff;
     -fx-background-radius: 20 20 0 0;
     -fx-alignment: top_center;
     -fx-padding: 10;
@@ -72,15 +72,20 @@
     -fx-padding: 10 0 10 0;
 }
 
+ .report_container Text {
+    -fx-font-weight: bold;
+    -fx-fill: #132A13;
+ }
+
 .report_container Label {
-    -fx-font-weight: center;
+    -fx-text-alignment: center;
     -fx-wrap-text: true;
 }
 
 .report_container Button {
     -fx-pref-width: 80;
     -fx-background-color: #132A13;
-    -fx-text-fill: #FFFFFF;
+    -fx-fill: #FFFFFF;
 }
 
 .report_container Button:hover {

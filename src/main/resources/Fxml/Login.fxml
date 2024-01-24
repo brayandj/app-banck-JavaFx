@@ -24,8 +24,8 @@
             <TextField fx:id="payee_address_fld" styleClass="input_field" />
             <Label fx:id="password_lbl" text="Contraseña:" />
             <TextField fx:id="password_address_fld" styleClass="input_field" />
-            <Button fx:id="login_btn" mnemonicParsing="false" text="Button" />
-            <Label id="choice-prompt-text" fx:id="error_lbl" styleClass="error_lbl" text="Error:" />
+            <Button fx:id="login_btn" mnemonicParsing="false" text="Login" />
+            <Label id="choice-prompt-text" fx:id="error_lbl" styleClass="error_lbl" />
          </children>
       </VBox>
       <FontAwesomeIconView />

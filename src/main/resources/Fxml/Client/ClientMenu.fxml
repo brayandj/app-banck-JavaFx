@@ -8,11 +8,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="754.0" prefWidth="232.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Client.ClientMenuControlller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="180.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Client.ClientMenuControlller">
    <children>
-      <AnchorPane prefHeight="730.0" prefWidth="338.0">
+      <AnchorPane prefHeight="724.0" prefWidth="188.0" styleClass="left_container">
          <children>
-            <VBox prefHeight="80.0" prefWidth="160.0" styleClass="tittle_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox prefHeight="150.0" prefWidth="160.0" styleClass="tittle_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <FontAwesomeIconView glyphName="BANK" size="30" tabSize="0" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFx Project" />
@@ -48,7 +48,7 @@
                   </Button>
                </children>
             </VBox>
-            <VBox prefHeight="120.0" prefWidth="130.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+            <VBox prefHeight="120.0" prefWidth="147.0" styleClass="report_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="19.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Reportar un error" />
                   <Label text="Informe cualquier error o sugerencia" />

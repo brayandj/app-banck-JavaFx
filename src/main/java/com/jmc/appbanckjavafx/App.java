@@ -1,24 +1,15 @@
 package com.jmc.appbanckjavafx;
 
+import com.jmc.appbanckjavafx.Models.Model;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
     @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.show();
-
-
+    public void start(Stage stage) {
+        Model.getInstance().getViewFactory().showLoginWindow();
     }
 }

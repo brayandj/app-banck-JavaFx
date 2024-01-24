@@ -3,18 +3,14 @@
 }
 
 .user_name {
-    -fx-font-size: 2.5em;
+    -fx-font-size: 2.6em;
     -fx-font-family: "Calibri light";
 }
 
 .date_lbl {
-    -fx-background-color: #FFFFFF;
-    -fx-background-radius: 10 0 0 10;
-    -fx-padding: 10 0 10 0;
-    -fx-alignment: center;
-    -fx-border-width: 0 1 0 0;
-    -fx-background-color: #DDDDDD;
-    -fx-padding: 10;
+    -fx-text-fill: #AAAAAA;
+    -fx-font-size: 1.1em;
+    -fx-font-family: "Calibri Light";
 }
 
 .section_title {
@@ -25,11 +21,11 @@
 /* Accounts View */
 .accounts_view {
     -fx-background-color: #FFFFFF;
-    -fx-background-radius: 10 0 0 10;
-    -fx-padding: 10 0 10 0;
+    -fx-background-radius: 10 10 10 10;
+    -fx-padding: 10 10 10 10;
     -fx-alignment: center;
     -fx-border-width:  0 1 0 0;
-    -fx-border-color: #000000;
+    -fx-border-color: #DDDDDD;
     -fx-spacing: 10;
 }
 
@@ -83,7 +79,7 @@
     -fx-spacing: 10;
     -fx-alignment: center_left;
     -fx-border-radius: 10;
-    -fx-background-color: #999999;
+    -fx-border-color: #999999;
     -fx-border-width: 1;
     -fx-border-style: dashed;
 }
@@ -117,7 +113,7 @@
 
 .list-cell {
     -fx-background-color: #EEEEEE;
-    -fx-padding: 15 15 0;
+    -fx-padding: 15 0 15 0;
 }
 
 /* Send Money View */
