@@ -16,6 +16,6 @@ public class ClientMenuControlller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        dashboard_btn.setOnAction();
+
     }
 }

@@ -6,7 +6,7 @@
 .left_container {
     -fx-background-color: #FFFFFF;
     -fx-background-radius: 10;
-    -fx-effect: drogshadon(two-gass-box, #AAAAAA, 5, 0, 0, 4);
+    -fx-effect: dropshadow(two-gass-box, #AAAAAA, 5, 0, 0, 4);
 }
 /* Title/Logo Section */
 .tittle_container {
