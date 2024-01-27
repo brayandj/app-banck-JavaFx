@@ -8,12 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="accounts_view_container" stylesheets="@../../Styles/Accounts.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Client.AccountsController">
    <children>
       <Text layoutX="29.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta de cheques" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
-      <VBox layoutX="15.0" layoutY                          ="42.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
-         <children>
+      <VBox layoutX="15.0" layoutY="42.0" prefHeight="300.0" prefWidth="450.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+         <children>  
             <Text layoutX="10.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de cuenta:" />
             <Label fx:id="ch_acc_num" text="3452 4950" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Límite de transacciones:" />

@@ -11,8 +11,17 @@ public class AdminController  implements Initializable {
     public BorderPane admin_parent;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        Model.getInstance().getViewFactory().getClientSelectedMenuItem().addListener((observable, oldValue, newValue) -> {
+        Model.getInstance().getViewFactory().getAdminSelectedMenuItem().addListener((observable, oldValue, newValue) -> {
             //Add Switch statement
+            switch (newValue) {
+                case CLIENTS:
+                    admin_parent.setCenter(Model.getInstance().getViewFactory().getClientsView());
+                    break;
+                case DEPOSIT:
+                    admin_parent.setCenter(Model.getInstance().getViewFactory().getDepositView());
+                default:
+                    admin_parent.setCenter(Model.getInstance().getViewFactory().getCreateClientView());
+            }
         });
     }
 }

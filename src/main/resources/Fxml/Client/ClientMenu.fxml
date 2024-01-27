@@ -14,7 +14,7 @@
          <children>
             <VBox prefHeight="150.0" prefWidth="160.0" styleClass="tittle_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <FontAwesomeIconView glyphName="BANK" size="30" tabSize="0" />
+                  <FontAwesomeIconView glyphName="BANK" size="30" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFx Project" />
                </children>
             </VBox>

@@ -2,11 +2,11 @@ package com.jmc.appbanckjavafx.Controllers.Client;
 
 import com.jmc.appbanckjavafx.Models.Model;
 import javafx.fxml.Initializable;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 
 public class ClientController implements Initializable {
     public BorderPane client_parent;
