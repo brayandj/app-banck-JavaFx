@@ -90,10 +90,8 @@ public class ViewFactory {
     * Admin Views Section
     * */
     public ObjectProperty<AdminMenuOptions> getAdminSelectedMenuItem(){
-
         return adminSelectedMenuItem;
     }
-
     public AnchorPane getCreateClientView() {
         if (createClientView == null) {
             try {

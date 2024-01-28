@@ -2,14 +2,14 @@
 
 <?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="client_parent" xmlns="http://javafx.com/javafx"
+<BorderPane fx:id="admin_parent" xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml">
     <left>
-        <fx:include source="AdminMenu.fxml"></fx:include>
+        <fx:include source="AdminMenu.fxml"/>
     </left>
 
     <center>
-        <fx:include source="CreateClient.fxml"></fx:include>
+        <fx:include source="CreateClient.fxml"/>
     </center>
 
 </BorderPane>

@@ -9,7 +9,9 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="create_client_container" stylesheets="@../../Styles/CreateClient.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Admin.CreateClientController">
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="create_client_container"
+            stylesheets="@../../Styles/CreateClient.css" xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Admin.CreateClientController">
    <children>
       <Text layoutX="214.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear cuenta de nuevo cliente" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
       <VBox fillWidth="false" layoutX="21.0" layoutY="51.0" prefHeight="700.0" prefWidth="600.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="80.0">
