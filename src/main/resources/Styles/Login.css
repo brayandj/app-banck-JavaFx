@@ -9,8 +9,8 @@
     -fx-alignment: center;
 }
 .login_logo_container Text {
- -fx-font-size: 2em;
- -fx-fill: #FFFFFF;
+    -fx-font-size: 2em;
+    -fx-fill: #FFFFFF;
 }
 
 .login_logo_container FontAwesomeIconView {
@@ -18,9 +18,8 @@
 }
 
 /* Account Selector ChoicerBox Styles */
-.account_selector  {
+.account_selector {
     -fx-background-color: #ECF39E;
-    
 }
 
 .account_selector .label {
@@ -37,13 +36,13 @@
 }
 
 /* Login  Fom Styles */
-
 #choice-prompt-text {
     -fx-font-weight: 400;
 }
+
 .login_form_container {
     -fx-spacing: 15;
-    -fx-font-weight: top_left;
+    -fx-alignment: top_left;
 }
 
 .login_form_container Label {

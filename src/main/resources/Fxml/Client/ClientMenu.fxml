@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="724.0" prefWidth="188.0" styleClass="left_container">
          <children>
-            <VBox prefHeight="150.0" prefWidth="160.0" styleClass="tittle_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox prefHeight="150.0" prefWidth="160.0" styleClass="title_container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <FontAwesomeIconView glyphName="BANK" size="30" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFx Project" />

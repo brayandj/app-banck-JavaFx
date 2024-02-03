@@ -11,9 +11,11 @@ public class ClientCellFactory extends ListCell<Client> {
         super.updateItem(client, empty);
         if (empty) {
             setText(null);
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/Client.fxml"));
+            setGraphic(null);
+        } else {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Admin/ClientCell.fxml"));
             ClientCellController controller = new ClientCellController(client);
-            loader.setController(client);
+            loader.setController(controller);
             setText(null);
             try {
                 setGraphic(loader.load());

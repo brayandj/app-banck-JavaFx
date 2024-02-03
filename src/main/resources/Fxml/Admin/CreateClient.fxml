@@ -33,7 +33,7 @@
             <Text layoutX="10.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar saldo de cuenta" />
             <TextField fx:id="sv_amount_fld" layoutX="10.0" layoutY="219.0" />
             <Button fx:id="create_client_btn" mnemonicParsing="false" text="Crear nuevo" />
-            <Label fx:id="error_lbl" styleClass="error_lbl" text="Error:" />
+            <Label fx:id="error_lbl" styleClass="error_lbl" />
          </children>
       </VBox>
    </children>

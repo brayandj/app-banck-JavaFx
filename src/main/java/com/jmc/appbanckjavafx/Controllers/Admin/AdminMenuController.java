@@ -4,6 +4,7 @@ import com.jmc.appbanckjavafx.Models.Model;
 import com.jmc.appbanckjavafx.Views.AdminMenuOptions;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +24,7 @@ public class AdminMenuController implements Initializable {
         create_client_btn.setOnAction(event -> onCreateClient());
         clients_btn.setOnAction(event -> onClients());
         deposit_btn.setOnAction(event -> onDeposit());
+        logout_btn.setOnAction(event -> onLogout());
     }
     private void onCreateClient() {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.CREATE_CLIENT);
@@ -32,5 +34,16 @@ public class AdminMenuController implements Initializable {
     }
     private void onDeposit() {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.DEPOSIT);
+    }
+    private void onLogout() {
+        //Get stage
+        Stage stage = (Stage) logout_btn.getScene().getWindow();
+        //Close the client window
+        Model.getInstance().getViewFactory().closeStage(stage);
+        //Show login window
+        Model.getInstance().getViewFactory().showLoginWindow();
+        //Set client login flag to false
+        Model.getInstance().setAdminLoginSuccessFlag(false);
+
     }
 }

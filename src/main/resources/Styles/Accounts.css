@@ -28,7 +28,7 @@
     -fx-pref-width: 230;
     -fx-pref-height: 35;
     -fx-background-color: #FFFFFF;
-    -fx-effect: dopshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
 }
 
 .accounts_view_container Button {
