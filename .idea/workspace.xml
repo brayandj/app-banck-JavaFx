@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2f9ca0d-eaf2-4c1a-b3a6-5e318d5e1405" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/DBTableColumns.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/DBTableNames.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/AdminMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/AdminMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/ClientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/ClientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/CreateClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/CreateClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/ClientMenuControlller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/ClientMenuControlller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/DatabaseDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/DatabaseDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/SavingsAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/SavingsAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Views/ClientCellFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Views/ClientCellFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Views/ViewFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Views/ViewFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Clients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Clients.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/CreateClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/CreateClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/ClientCell.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/ClientMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Accounts.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Accounts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Clients.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Clients.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Deposit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Deposit.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/ClientCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/ClientCell.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +46,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.App.executor": "Debug",
+    "Application.App.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -185,11 +164,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Views/TransactionCellFactory.java</url>
           <line>22</line>
           <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Views/ClientCellFactory.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Model.java</url>
@@ -419,6 +393,31 @@
           <line>124</line>
           <option name="timeStamp" value="325" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Model.java</url>
+          <line>114</line>
+          <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Client.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="327" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Client.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="328" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Client.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="329" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Admin/ClientsController.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="330" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/ClientController.java</url>
           <line>11</line>
@@ -427,6 +426,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="com.jmc.appbanckjavafx.Models.CheckingAccount" memberName="owner" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((JDBC4PreparedStatement)preparedStatement).resultsWaiting" language="JAVA" custom="org.sqlite.jdbc4.JDBC4PreparedStatement" />
