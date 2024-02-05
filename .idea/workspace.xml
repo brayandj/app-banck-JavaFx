@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2f9ca0d-eaf2-4c1a-b3a6-5e318d5e1405" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/ClientCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/ClientCell.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="c2f9ca0d-eaf2-4c1a-b3a6-5e318d5e1405" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,11 +49,17 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "feactures",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/HP/.m2/repository/org/openjfx/javafx-fxml/21/javafx-fxml-21.jar",
+    "last_opened_file_path": "C:/Users/brayand/Documents/NetBeansProjects/app-banck-JavaFx/target",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.rainbow.brackets.disable.when"
+    "settings.editor.selected.configurable": "preferences.rainbow.brackets.disable.when",
+    "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
@@ -66,6 +69,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\brayand\Documents\NetBeansProjects\app-banck-JavaFx\src" />
+      <recent name="C:\Users\brayand\Documents\NetBeansProjects\app-banck-JavaFx\target" />
       <recent name="C:\Users\brayand\Documents\NetBeansProjects\app-banck-JavaFx\src\main\resources\Fxml\Admin" />
       <recent name="C:\Users\HP\OneDrive\Escritorio\app-banck-JavaFx\src\main\resources\Styles" />
     </key>
@@ -94,8 +99,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705709297590</updated>
+      <workItem from="1707161156106" duration="2315000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
