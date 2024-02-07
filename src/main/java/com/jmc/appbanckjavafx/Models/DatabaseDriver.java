@@ -34,6 +34,12 @@ public class DatabaseDriver {
         stmt.executeUpdate();
     }
 
+    public void insert(String sql, Object... params) throws SQLException {
+        PreparedStatement stmt = this.conn.prepareStatement(sql);
+        setParameters(stmt, params);
+        stmt.executeUpdate();
+    }
+
     private void setParameters(PreparedStatement stmt, Object[] params) throws SQLException {
         for(int i = 0; i < params.length; i++) {
             stmt.setObject(i + 1, params[i]);
@@ -51,7 +57,7 @@ public class DatabaseDriver {
 
     public ResultSet getAdminData(String tableName, String username, String password) {
         try {
-            return query("SELECT * FROM "+ tableName +" WHERE Username = ? AND Password = ?", username, password);
+            return query("SELECT * FROM " + tableName + " WHERE Username = ? AND Password = ?", username, password);
         } catch (SQLException e) {
             handleException(e);
             return null;
@@ -60,7 +66,7 @@ public class DatabaseDriver {
 
     public void createClient(String tableName, String columms, String fname, String lname, String address, String password, LocalDate date) {
         try {
-            update("INSERT INTO " + tableName + " ("+ columms + ")" + " VALUES (?,?,?,?,?)", fname, lname, address, password, java.sql.Date.valueOf(date));
+            insert("INSERT INTO " + tableName + " ("+ columms + ")" + " VALUES (?,?,?,?,?)", fname, lname, address, password, java.sql.Date.valueOf(date));
 
         } catch (SQLException e) {
             handleException(e);
@@ -101,7 +107,7 @@ public class DatabaseDriver {
 
     public void createAccount(String tableName,String columns, String owner, String number, double limit, double balance) {
         try {
-            update("INSERT INTO " + tableName + " (" + columns + ") VALUES (?,?,?,?)", owner, number, limit, balance);
+            insert("INSERT INTO " + tableName + " (" + columns + ") VALUES (?,?,?,?)", owner, number, limit, balance);
         } catch (SQLException e) {
             handleException(e);
         }
@@ -128,6 +134,25 @@ public class DatabaseDriver {
             return null;
         }
     }
+
+    public ResultSet searchClient(String tableName,String column, String pAddress) {
+        try {
+            return query("SELECT * FROM " + tableName + " WHERE " + column + " = ?", pAddress);
+        } catch (SQLException e) {
+            handleException(e);
+        }
+        return null;
+    }
+
+    public ResultSet depositSavings(String tableName,String columnSet, String columnWhere, String pAddress, double amount) {
+        try {
+            update("UPDATE " + tableName + " SET " + columnSet + " = ? WHERE " + columnWhere +" = ?", amount, pAddress);
+        } catch (SQLException e) {
+            handleException(e);
+        }
+        return null;
+    }
+
     /*
     *Utility methods
      */

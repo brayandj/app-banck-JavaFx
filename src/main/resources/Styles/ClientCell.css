@@ -10,7 +10,7 @@
 
 .client_cell_container HBox {
     -fx-spacing: 15;
-    -fx-alignment: Center_left;
+    -fx-alignment: CENTER_LEFT; /* Corregido a mayúsculas */
 }
 
 .client_cell_container HBox Label {
@@ -19,12 +19,26 @@
     -fx-font-size: 1.5em;
 }
 
+.client_cell_container:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #132813;
+}
+
+/* Aplicar estilos a los elementos dentro del contenedor cuando se pasa el mouse sobre él */
+.client_cell_container:hover FontAwesomeIconView {
+    -fx-fill: #FFFFFF;
+}
+
+.client_cell_container:hover HBox Label {
+    -fx-text-fill: #FFFFFF;
+}
 .acc_display_lbl {
     -fx-font-family: "Calibri";
     -fx-font-weight: bold;
     -fx-font-size: 1.1em;
 }
 
+/* Agregar un nuevo estilo para los botones de eliminar */
 .delete_btn {
     -fx-text-fill: #FFFFFF;
     -fx-background-color: #FF0000;
@@ -35,5 +49,5 @@
 }
 
 .delete_btn:hover {
-    -fx-cursor: hand;
+    -fx-background-color: #ffc400;
 }
