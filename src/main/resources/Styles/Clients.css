@@ -10,7 +10,8 @@
 
 .clients_container .list-view {
     -fx-background-color: #EEEEEE;
-    -fx-border-width: 0;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: #AAAAAA;
 }
 
 .clients_container .list-cell {

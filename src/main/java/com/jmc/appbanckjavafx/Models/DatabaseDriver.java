@@ -13,6 +13,7 @@ public class DatabaseDriver {
             throw new RuntimeException(e);
         }
     }
+
     public void closeConnection() {
         try {
             if (this.conn != null && !conn.isClosed()) {
@@ -128,7 +129,7 @@ public class DatabaseDriver {
 
     public ResultSet getAllClientsData(String tableName) {
         try {
-            return query("SELECT * FROM "+ tableName);
+            return query("SELECT * FROM " + tableName);
         } catch (SQLException e) {
             handleException(e);
             return null;
@@ -151,6 +152,16 @@ public class DatabaseDriver {
             handleException(e);
         }
         return null;
+    }
+
+    public ResultSet getTransactions(String tableName, String columnNameWhere, String columnNameOr, String pAddress, int limit) {
+        try {
+            return query("SELECT * FROM " + tableName + " WHERE " + columnNameWhere + " = ? OR " + columnNameOr + " = ? LIMIT " + limit,
+                    pAddress, pAddress);
+        } catch (SQLException e) {
+            handleException(e);
+            return null;
+        }
     }
 
     /*

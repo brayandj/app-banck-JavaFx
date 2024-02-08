@@ -25,11 +25,15 @@
 }
 
 .trans_amount_lbl {
-    -fx-background-color: #132A13;
-    -fx-background-radius: 2;
+    /*-fx-background-color: #132A13;*/
+    -fx-background-color: linear-gradient(to right, #074715, #1d1d20);
+    -fx-background-radius: 50%;
     -fx-text-fill: #FFFFFF;
-    -fx-padding: 5;
-    -fx-font-weight: 700;
+    -fx-padding: 5px;
+    -fx-font-weight: bold;
+    -fx-alignment: center; /* Para centrar el contenido horizontal y verticalmente */
+    -fx-min-width: 50px; /* Ancho mínimo para asegurar que el texto no se corte */
+    -fx-min-height: 50px; /* Alto mínimo para asegurar que el texto no se corte */
 }
 
 .trans_amount_lbl FontAwesomeIconView {

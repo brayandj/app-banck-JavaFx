@@ -12,8 +12,10 @@ public class Model {
     private final ViewFactory viewFactory;
     private final DatabaseDriver databaseDriver;
     //Admind Data section
-    private Client client;
+    private final Client client;
     private boolean clientLoginSuccessFlag;
+    private final ObservableList<Transaction> latesTransactions;
+    private final ObservableList<Transaction> allTransactions;
     //Admin Data Section
     private boolean adminLoginSuccessFlag;
     ObservableList<Client> clients;
@@ -22,6 +24,8 @@ public class Model {
         this.databaseDriver = new DatabaseDriver();
         this.clientLoginSuccessFlag = false;
         this.client = new Client("", "", "", null, null, null);
+        this.latesTransactions = FXCollections.observableArrayList();
+        this.allTransactions = FXCollections.observableArrayList();
         //Admin Data Section
         this.adminLoginSuccessFlag = false;
         this.clients = FXCollections.observableArrayList();
@@ -80,10 +84,31 @@ public class Model {
             e.printStackTrace();
         }
     }
+
+
     /*
     *Admin Method Section
      */
-
+//query("SELECT * FROM " + tableName + " WHERE " + columnNameWhere + " = ? OR " + columnNameOr + " = ? LIMIT " + limit,
+//                    pAddress, pAddress);
+    private void prepareTransactions(ObservableList<Transaction> transaction, int limit) {
+        ResultSet resultSet = databaseDriver.getTransactions(DBTableNames.TRANSACTIONS.getTableName(), "Sender",
+                "Receiver",
+                this.client.pAddressProperty().get(),limit);
+        try {
+            while (resultSet.next()) {
+                String sender = resultSet.getString("Sender");
+                String receiver = resultSet.getString("Receiver");
+                double amount = resultSet.getDouble("Amount");
+                String[] dateParts = resultSet.getString("Date").split("-");
+                LocalDate date = LocalDate.of(Integer.parseInt(dateParts[0]), Integer.parseInt(dateParts[1]), Integer.parseInt(dateParts[2]));
+                String message = resultSet.getString("Message");
+                transaction.add(new Transaction(sender, receiver, amount, date, message));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     public boolean getAdminLoginSuccessFlag() {
         return adminLoginSuccessFlag;
     }
@@ -102,7 +127,22 @@ public class Model {
         }
     }
 
-    public ObservableList<Client> getClients() {
+    public void setLatesTransactions() {
+        prepareTransactions(this.latesTransactions, 4);
+    }
+
+    public ObservableList<Transaction> getLatesTransactions() {
+        return latesTransactions;
+    }
+    public void setAllTransactions() {
+        prepareTransactions(this.allTransactions, -1);
+    }
+
+    public ObservableList<Transaction> getAllTransactions() {
+        return allTransactions;
+    }
+
+    public ObservableList<Client>  getClients() {
         return clients;
     }
 

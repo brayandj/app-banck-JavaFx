@@ -24,5 +24,5 @@ public class ClientController implements Initializable {
                     client_parent.setCenter(Model.getInstance().getViewFactory().getDashboardView());
             }
         });
-    }
+     }
 }
