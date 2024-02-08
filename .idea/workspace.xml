@@ -6,16 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c2f9ca0d-eaf2-4c1a-b3a6-5e318d5e1405" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/TransactionCellController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/TransactionCellController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/TransactionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Controllers/Client/TransactionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/DatabaseDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/DatabaseDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jmc/appbanckjavafx/Models/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Clients.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Admin/Clients.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Fxml/Client/TransactionCell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Fxml/Client/TransactionCell.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Clients.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Clients.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/TransactionCell.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/TransactionCell.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
