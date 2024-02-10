@@ -36,13 +36,9 @@ public class AdminMenuController implements Initializable {
         Model.getInstance().getViewFactory().getAdminSelectedMenuItem().set(AdminMenuOptions.DEPOSIT);
     }
     private void onLogout() {
-        //Get stage
         Stage stage = (Stage) logout_btn.getScene().getWindow();
-        //Close the client window
         Model.getInstance().getViewFactory().closeStage(stage);
-        //Show login window
         Model.getInstance().getViewFactory().showLoginWindow();
-        //Set client login flag to false
         Model.getInstance().setAdminLoginSuccessFlag(false);
 
     }

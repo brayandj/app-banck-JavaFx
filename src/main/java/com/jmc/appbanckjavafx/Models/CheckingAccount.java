@@ -4,7 +4,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 
 public class CheckingAccount extends Account{
-    //the number of transactions a client is allowed to do per day
+    //El número de transacciones que un cliente puede realizar al día
     private final IntegerProperty transactionLimit;
     protected CheckingAccount(String owner, String accountNumber, double balance, int tLimit) {
         super(owner, accountNumber, balance);

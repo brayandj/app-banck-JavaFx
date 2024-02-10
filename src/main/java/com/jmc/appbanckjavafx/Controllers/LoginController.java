@@ -11,8 +11,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.util.ResourceBundle;
+
 public class LoginController implements Initializable {
     public ChoiceBox<AccountType> acc_selector;
     public Label payee_address_lbl;
@@ -33,11 +33,10 @@ public class LoginController implements Initializable {
     private void onLogin() {
         Stage stage = (Stage) error_lbl.getScene().getWindow();
         if (Model.getInstance().getViewFactory().getLoginAccountType() == AccountType.CLIENT) {
-            // Evaluate Client Login Credentials
+            //Evaluar las credenciales de inicio de sesión del cliente
             Model.getInstance().evaluateClientCred(payee_address_fld.getText(), password_fld.getText());
             if (Model.getInstance().getClientLoginSuccessFlag()) {
                 Model.getInstance().getViewFactory().showClientWindow();
-                //Close the login
                 Model.getInstance().getViewFactory().closeStage(stage);
             } else {
                 payee_address_fld.setText("");
@@ -45,11 +44,10 @@ public class LoginController implements Initializable {
                 error_lbl.setText("No se encontraron Credenciales");
             }
         } else {
-            //Evaluate Admin Credentials
+            //Evaluar las credenciales administrativas
             Model.getInstance().evaluateAdminCred(payee_address_fld.getText(), password_fld.getText());
             if (Model.getInstance().getAdminLoginSuccessFlag()) {
                 Model.getInstance().getViewFactory().showAdminWindow();
-                //Close the Login stage
                 Model.getInstance().getViewFactory().closeStage(stage);
             } else {
                 payee_address_fld.setText("");
@@ -60,7 +58,7 @@ public class LoginController implements Initializable {
     }
 
     private void setAcc_selector() {
-        // Change payee Address label accordingly
+        //Cambiar la etiqueta de dirección del beneficiario
         Model.getInstance().getViewFactory().setLoginAccountType(acc_selector.getValue());
         if (acc_selector.getValue() == AccountType.ADMIN) {
             payee_address_lbl.setText("Usuario:");

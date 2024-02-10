@@ -10,7 +10,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.ResourceBundle;
@@ -48,14 +47,14 @@ public class CreateClientController implements Initializable {
     }
 
     private void createClient() {
-        //Create Checking Account
+        //Crear cuenta corriente
         if (createCheckingAccountFlag) {
             createAccount("Checking");
-            // Create Saving Account
+            //Crear una cuenta de ahorro
             if (createSavingsAccountFlag) {
                 createAccount("Savings");
             }
-            //Create Client
+            //Crear Cliente
             String fName = fName_fld.getText();
             String lName = lName_fld.getText();
             String password = password_fld.getText();
@@ -69,11 +68,11 @@ public class CreateClientController implements Initializable {
 
     private void createAccount(String accountType) {
         double balance = Double.parseDouble(ch_account_fld.getText());
-        //Generate Account Number
+        //Generar número de cuenta
         String firstSection = "3201";
         String lastSection = Integer.toString(new Random().nextInt(9999) + 1000);
         String accountNumber = firstSection + " " + lastSection;
-        //Create the checking or Savings account
+        //Crear la cuenta corriente o de ahorro
         if (accountType.equals("Checking")) {
             Model.getInstance().getDatabaseDriver().createCheckingAccount(DBTableNames.CHECKING_ACCOUNTS.getTableName(), DBTableColumns.CHECKING_ACCOUNTS.getColumns(),
                     payeeAddress, accountNumber, 10, balance);

@@ -85,12 +85,9 @@ public class Model {
         }
     }
 
-
     /*
     *Admin Method Section
      */
-//query("SELECT * FROM " + tableName + " WHERE " + columnNameWhere + " = ? OR " + columnNameOr + " = ? LIMIT " + limit,
-//                    pAddress, pAddress);
     private void prepareTransactions(ObservableList<Transaction> transaction, int limit) {
         ResultSet resultSet = databaseDriver.getTransactions(DBTableNames.TRANSACTIONS.getTableName(), "Sender",
                 "Receiver",
@@ -109,6 +106,7 @@ public class Model {
             e.printStackTrace();
         }
     }
+
     public boolean getAdminLoginSuccessFlag() {
         return adminLoginSuccessFlag;
     }
@@ -116,6 +114,7 @@ public class Model {
     public void setAdminLoginSuccessFlag(boolean adminLoginSuccessFlag) {
         this.adminLoginSuccessFlag = adminLoginSuccessFlag;
     }
+
     public void evaluateAdminCred(String username, String password)  {
         ResultSet resultSet = databaseDriver.getAdminData(DBTableNames.ADMINS.getTableName(), username, password);
         try {

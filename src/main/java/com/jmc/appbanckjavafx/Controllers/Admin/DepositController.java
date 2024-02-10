@@ -1,11 +1,9 @@
 package com.jmc.appbanckjavafx.Controllers.Admin;
 
-import com.jmc.appbanckjavafx.Controllers.Client.DBTableColumns;
 import com.jmc.appbanckjavafx.Controllers.Client.DBTableNames;
 import com.jmc.appbanckjavafx.Models.Client;
 import com.jmc.appbanckjavafx.Models.Model;
 import com.jmc.appbanckjavafx.Views.ClientCellFactory;
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;

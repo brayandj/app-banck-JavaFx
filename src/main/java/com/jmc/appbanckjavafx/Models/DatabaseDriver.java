@@ -56,6 +56,48 @@ public class DatabaseDriver {
         }
     }
 
+    //El método devuelve el saldo de la cuenta de ahorro
+    public double getSavingsAccountBalance(String tableName, String columnName, String pAddress) {
+        double balance = 0;
+        try {
+            ResultSet resultSet = query("SELECT * FROM " + tableName + " WHERE " + columnName + " = ? ", pAddress);
+            balance = resultSet.getDouble("Balance");
+        } catch (SQLException e) {
+            handleException(e);
+        }
+        return balance;
+    }
+
+    //Método para sumar o restar de la balanza una operación dada
+    public void updateBalance(String tableName, String columnName, String pAddress, double amount, String operation) {
+        ResultSet resultSet;
+        try {
+            resultSet = query("SELECT * FROM " + tableName + " WHERE " + columnName + " = ? ", pAddress);
+            double newBalance;
+            if (operation.equals("ADD")) {
+                newBalance = resultSet.getDouble("Balance") + amount;
+                update("UPDATE " + tableName + " SET Balance = ?" + " WHERE " + columnName + "= ?",newBalance, pAddress);
+            } else {
+                if (resultSet.getDouble("Balance") > amount) {
+                    newBalance = resultSet.getDouble("Balance") + amount;
+                    update("UPDATE " + tableName + " SET Balance = ?" + " WHERE " + columnName + "= ?", newBalance, pAddress);
+                }
+            }
+        } catch (SQLException e) {
+            handleException(e);
+        }
+    }
+    //Crea y registra una nueva transacción
+    public void newTransaction(String tableName,String columms, String sender, String receiver, double amount, String message) {
+        try {
+            LocalDate date = LocalDate.now();
+            insert("INSERT INTO " + tableName + " ("+ columms + ")" + " VALUES (?,?,?,?,?)",sender, receiver, amount, date, message);
+        } catch (SQLException e) {
+            handleException(e);
+        }
+    }
+
+    //Datos administrativos
     public ResultSet getAdminData(String tableName, String username, String password) {
         try {
             return query("SELECT * FROM " + tableName + " WHERE Username = ? AND Password = ?", username, password);
@@ -88,23 +130,6 @@ public class DatabaseDriver {
         }
         return resultSet;
     }
-    public void createClient(String fName, String lName, String pAddress, String password, LocalDate date) {
-        PreparedStatement preparedStatement;
-        try {
-            String sql = "INSERT INTO Clients (FirstName, LastName, PayeeAddress, Password, Date)" +
-                    "VALUES (?, ?, ?, ?, ?)";
-            preparedStatement = this.conn.prepareStatement(sql);
-            preparedStatement.setString(1, fName);
-            preparedStatement.setString(2, lName);
-            preparedStatement.setString(3, pAddress);
-            preparedStatement.setString(4, password);
-            preparedStatement.setDate(5, java.sql.Date.valueOf(date));
-
-            preparedStatement.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void createAccount(String tableName,String columns, String owner, String number, double limit, double balance) {
         try {
@@ -124,7 +149,6 @@ public class DatabaseDriver {
 
     private void handleException(SQLException e) {
         e.printStackTrace();
-        // manejo de excepcion
     }
 
     public ResultSet getAllClientsData(String tableName) {
@@ -134,15 +158,6 @@ public class DatabaseDriver {
             handleException(e);
             return null;
         }
-    }
-
-    public ResultSet searchClient(String tableName,String column, String pAddress) {
-        try {
-            return query("SELECT * FROM " + tableName + " WHERE " + column + " = ?", pAddress);
-        } catch (SQLException e) {
-            handleException(e);
-        }
-        return null;
     }
 
     public ResultSet depositSavings(String tableName,String columnSet, String columnWhere, String pAddress, double amount) {
@@ -165,8 +180,16 @@ public class DatabaseDriver {
     }
 
     /*
-    *Utility methods
+    *Métodos de utilidad
      */
+    public ResultSet searchClient(String tableName,String column, String pAddress) {
+        try {
+            return query("SELECT * FROM " + tableName + " WHERE " + column + " = ?", pAddress);
+        } catch (SQLException e) {
+            handleException(e);
+        }
+        return null;
+    }
     public int getListClientsId() {
         try {
             ResultSet rs = query("SELECT seq FROM sqlite_sequence WHERE name = 'Clients'");
@@ -179,14 +202,6 @@ public class DatabaseDriver {
         return 0;
     }
 
-//    public ResultSet getCheckingAccountData(String tableName, String pAddress) {
-//        try {
-//            return query("SELECT * FROM " + tableName + " WHERE Owner = ?" + "'" + pAddress + "'");
-//        } catch (SQLException e) {
-//            handleException(e);
-//            return null;
-//        }
-//    }
     public ResultSet getCheckingAccountData(String tableName, String pAddress) {
         try {
             return query("SELECT * FROM " + tableName + " WHERE Owner = ?", pAddress);
@@ -195,7 +210,6 @@ public class DatabaseDriver {
             return null;
         }
     }
-
 
     public ResultSet getSavingsAccountData(String tableName, String pAddress) {
         try {

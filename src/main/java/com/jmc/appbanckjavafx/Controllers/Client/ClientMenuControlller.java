@@ -37,13 +37,10 @@ public class ClientMenuControlller implements Initializable {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.ACCOUNTS);
     }
     private void onLogout() {
-        //Get stage
         Stage stage = (Stage) dashboard_btn.getScene().getWindow();
-        //Close the client window
         Model.getInstance().getViewFactory().closeStage(stage);
-        //Show login window
         Model.getInstance().getViewFactory().showLoginWindow();
-        //Set client login flag to false
+        //Establecer el indicador de inicio de sesión del cliente en false
         Model.getInstance().setClientLoginSuccessFlag(false);
 
     }
