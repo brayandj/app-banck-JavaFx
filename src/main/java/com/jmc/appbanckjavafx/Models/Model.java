@@ -106,7 +106,12 @@ public class Model {
             e.printStackTrace();
         }
     }
-
+    public void setAllTransactions() {
+        prepareTransactions(this.allTransactions, -1);
+    }
+    public void setLatesTransactions() {
+        prepareTransactions(this.latesTransactions, -1);
+    }
     public boolean getAdminLoginSuccessFlag() {
         return adminLoginSuccessFlag;
     }
@@ -126,15 +131,8 @@ public class Model {
         }
     }
 
-    public void setLatesTransactions() {
-        prepareTransactions(this.latesTransactions, 4);
-    }
-
     public ObservableList<Transaction> getLatesTransactions() {
         return latesTransactions;
-    }
-    public void setAllTransactions() {
-        prepareTransactions(this.allTransactions, -1);
     }
 
     public ObservableList<Transaction> getAllTransactions() {

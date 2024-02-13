@@ -44,12 +44,17 @@ public class CreateClientController implements Initializable {
                 createCheckingAccountFlag = true;
             }
         });
+        sv_acc_box.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            createSavingsAccountFlag = true;
+        });
     }
 
     private void createClient() {
-        //Crear cuenta corriente
-        if (createCheckingAccountFlag) {
-            createAccount("Checking");
+        if (!isEmptyControls()) {
+            //Crear cuenta corriente
+            if (createCheckingAccountFlag) {
+                createAccount("Checking");
+            }
             //Crear una cuenta de ahorro
             if (createSavingsAccountFlag) {
                 createAccount("Savings");
@@ -67,19 +72,19 @@ public class CreateClientController implements Initializable {
     }
 
     private void createAccount(String accountType) {
-        double balance = Double.parseDouble(ch_account_fld.getText());
-        //Generar número de cuenta
-        String firstSection = "3201";
-        String lastSection = Integer.toString(new Random().nextInt(9999) + 1000);
-        String accountNumber = firstSection + " " + lastSection;
-        //Crear la cuenta corriente o de ahorro
-        if (accountType.equals("Checking")) {
-            Model.getInstance().getDatabaseDriver().createCheckingAccount(DBTableNames.CHECKING_ACCOUNTS.getTableName(), DBTableColumns.CHECKING_ACCOUNTS.getColumns(),
-                    payeeAddress, accountNumber, 10, balance);
-        } else {
-            Model.getInstance().getDatabaseDriver().createSavingsAccount(DBTableNames.SAVINGS_ACCOUNTS.getTableName(), DBTableColumns.SAVINGS_ACCOUNTS.getColumns(),
-                    payeeAddress, accountNumber, 2000, balance);
-        }
+            double balance = Double.parseDouble(ch_account_fld.getText());
+            //Generar número de cuenta
+            String firstSection = "3201";
+            String lastSection = Integer.toString(new Random().nextInt(9999) + 1000);
+            String accountNumber = firstSection + " " + lastSection;
+            //Crear la cuenta corriente o de ahorro
+            if (accountType.equals("Checking")) {
+                Model.getInstance().getDatabaseDriver().createCheckingAccount(DBTableNames.CHECKING_ACCOUNTS.getTableName(), DBTableColumns.CHECKING_ACCOUNTS.getColumns(),
+                        payeeAddress, accountNumber, 10, balance);
+            } else {
+                Model.getInstance().getDatabaseDriver().createSavingsAccount(DBTableNames.SAVINGS_ACCOUNTS.getTableName(), DBTableColumns.SAVINGS_ACCOUNTS.getColumns(),
+                        payeeAddress, accountNumber, 2000, balance);
+            }
     }
 
     private void onCreatePayeeAddress() {
@@ -99,6 +104,19 @@ public class CreateClientController implements Initializable {
         lName_fld.setText("");
         password_fld.setText("");
         pAddress_box.setSelected(false);
+        ch_acc_box.setSelected(false);
+        sv_acc_box.setSelected(false);
         pAddress_lbl.setText("");
+        ch_account_fld.setText("");
+        sv_amount_fld.setText("");
     }
+
+    private boolean isEmptyControls() {
+        boolean emptyField = fName_fld.getText().isEmpty() ||
+                lName_fld.getText().isEmpty() ||
+                password_fld.getText().isEmpty() ||
+                sv_amount_fld.getText().isEmpty();
+        return emptyField;
+    }
+
 }

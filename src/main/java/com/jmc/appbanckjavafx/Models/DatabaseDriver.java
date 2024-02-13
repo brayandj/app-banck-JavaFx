@@ -109,7 +109,7 @@ public class DatabaseDriver {
 
     public void createClient(String tableName, String columms, String fname, String lname, String address, String password, LocalDate date) {
         try {
-            insert("INSERT INTO " + tableName + " ("+ columms + ")" + " VALUES (?,?,?,?,?)", fname, lname, address, password, java.sql.Date.valueOf(date));
+            insert("INSERT INTO " + tableName + " ("+ columms + ")" + " VALUES (?,?,?,?,?)", fname, lname, address, password, java.sql.Date.valueOf(date).toString());
 
         } catch (SQLException e) {
             handleException(e);

@@ -8,15 +8,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="create_client_container"
-            stylesheets="@../../Styles/CreateClient.css" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Admin.CreateClientController">
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="create_client_container" stylesheets="@../../Styles/CreateClient.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Admin.CreateClientController">
    <children>
       <Text layoutX="214.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear cuenta de nuevo cliente" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0" />
       <VBox fillWidth="false" layoutX="21.0" layoutY="51.0" prefHeight="700.0" prefWidth="600.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="80.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Primer nombre:" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" />
             <TextField fx:id="fName_fld" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Apellido:" />
             <TextField fx:id="lName_fld" layoutX="10.0" layoutY="26.0" />
@@ -29,8 +26,8 @@
             <CheckBox fx:id="ch_acc_box" layoutX="10.0" layoutY="151.0" mnemonicParsing="false" text="Agregar cuenta corriente" />
             <Text layoutX="10.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo cuenta corriente:" />
             <TextField fx:id="ch_account_fld" layoutX="10.0" layoutY="109.0" />
-            <CheckBox fx:id="sv_acc_box" layoutX="10.0" layoutY="185.0" mnemonicParsing="false" text="Añadir configuración de la cuenta" />
-            <Text layoutX="10.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar saldo de cuenta" />
+            <CheckBox fx:id="sv_acc_box" layoutX="10.0" layoutY="185.0" mnemonicParsing="false" text="Agregar cuenta de ahorro" />
+            <Text layoutX="10.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo cuenta ahorro" />
             <TextField fx:id="sv_amount_fld" layoutX="10.0" layoutY="219.0" />
             <Button fx:id="create_client_btn" mnemonicParsing="false" text="Crear nuevo" />
             <Label fx:id="error_lbl" styleClass="error_lbl" />
