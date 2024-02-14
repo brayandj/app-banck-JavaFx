@@ -2,8 +2,11 @@ package com.jmc.appbanckjavafx.Controllers.Client;
 
 import com.jmc.appbanckjavafx.Models.Model;
 import com.jmc.appbanckjavafx.Views.ClientMenuOptions;
+import javafx.collections.ObservableList;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -22,13 +25,26 @@ public class ClientMenuControlller implements Initializable {
         addListeners();
     }
     private void addListeners() {
-        dashboard_btn.setOnAction(event -> onDashboard());
-        transaction_btn.setOnAction(event -> onTransactinos());
-        accounts_btn.setOnAction(event -> onAccounts());
-        logout_btn.setOnAction(event -> onLogout());
+        dashboard_btn.setOnAction(event -> {
+            onDashboard();
+            Model.getInstance().getViewFactory().handleButtonClick(dashboard_btn);
+        });
+        transaction_btn.setOnAction(event -> {
+            onTransactinos();
+            Model.getInstance().getViewFactory().handleButtonClick(transaction_btn);
+        });
+        accounts_btn.setOnAction(event -> {
+            onAccounts();
+            Model.getInstance().getViewFactory().handleButtonClick(accounts_btn);
+        });
+        logout_btn.setOnAction(event -> {
+            onLogout();
+            Model.getInstance().getViewFactory().handleButtonClick(logout_btn);
+        });
     }
     private void onDashboard() {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.DASHBOARD);
+
     }
     private void onTransactinos() {
         Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.TRANSACTIONS);
@@ -42,6 +58,9 @@ public class ClientMenuControlller implements Initializable {
         Model.getInstance().getViewFactory().showLoginWindow();
         //Establecer el indicador de inicio de sesión del cliente en false
         Model.getInstance().setClientLoginSuccessFlag(false);
+        Model.getInstance().getLatestTransactions().clear();
+        Model.getInstance().getAllTransactions().clear();
 
     }
+
 }

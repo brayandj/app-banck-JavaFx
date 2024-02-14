@@ -2,11 +2,15 @@ package com.jmc.appbanckjavafx.Views;
 
 import com.jmc.appbanckjavafx.Controllers.Admin.AdminController;
 import com.jmc.appbanckjavafx.Controllers.Client.ClientController;
+import javafx.animation.RotateTransition;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -15,6 +19,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -178,5 +183,23 @@ public class ViewFactory {
 
     public void closeStage(Stage stage) {
         stage.close();
+    }
+
+    public void handleButtonClick(Button button) {
+        ObservableList<Node> buttons = ((VBox) button.getParent()).getChildren();
+        // Eliminar la clase 'selected' de todos los botones
+        for (Node b: buttons) {
+            b.getStyleClass().remove("selected");
+        }
+        // Agregar la clase 'selected' al botón clickeado
+        button.getStyleClass().add("selected");
+        // Creamos la animación
+        RotateTransition rotateTransition = new RotateTransition(Duration.seconds(1), button);
+        rotateTransition.setByAngle(360); // Rotación de 360 grados
+        rotateTransition.setAutoReverse(true); // Auto-reverse: después de la rotación, el botón volverá a su posición original
+        rotateTransition.setCycleCount(2); // Repetimos la animación dos veces
+
+        // Evento de clic del botón para iniciar la animación
+        button.setOnMouseClicked(event -> rotateTransition.play());
     }
 }

@@ -32,12 +32,13 @@ public class DashboardController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         binData();
         initLatestTransactionsList();
-        transaction_listview.setItems(Model.getInstance().getLatesTransactions());
+        transaction_listview.setItems(Model.getInstance().getLatestTransactions());
         transaction_listview.setCellFactory(e -> new TransactionCellFactory());
         send_money_btn.setOnAction(event -> onSendMoney());
         accountSummary();
 
     }
+
 
     private void binData() {
         user_name.textProperty().bind(Bindings.concat("Hola, ").concat(Model.getInstance().getClient().firstNameProperty()));
@@ -49,8 +50,8 @@ public class DashboardController implements Initializable {
     }
 
     private void initLatestTransactionsList() {
-        if (Model.getInstance().getLatesTransactions().isEmpty()) {
-            Model.getInstance().setLatesTransactions();
+        if (Model.getInstance().getLatestTransactions().isEmpty()) {
+            Model.getInstance().setLatestTransactions();
         }
     }
 
@@ -61,21 +62,23 @@ public class DashboardController implements Initializable {
             String message = message_fld.getText();
             String sender = Model.getInstance().getClient().pAddressProperty().get();
             ResultSet resultSet = Model.getInstance().getDatabaseDriver().searchClient(DBTableNames.CLIENTS.getTableName(),
-                    "PayeeAddress", message);
+                    "PayeeAddress", receiver);
             try {
                 if (resultSet.isBeforeFirst()) {
-                    Model.getInstance().getDatabaseDriver().updateBalance(DBTableNames.SAVINGS_ACCOUNTS.getTableName(), "Owner", receiver, amount, "ADD");
+                    Model.getInstance().getDatabaseDriver().updateBalance(DBTableNames.SAVINGS_ACCOUNTS.getTableName(),
+                            "Owner", receiver, amount, "ADD");
                 }
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
             //Restar de la cuenta de ahorros del remitente
-            Model.getInstance().getDatabaseDriver().updateBalance(DBTableNames.SAVINGS_ACCOUNTS.getTableName(), "Owner", sender, amount, "SUB");
+            Model.getInstance().getDatabaseDriver().updateBalance(DBTableNames.SAVINGS_ACCOUNTS.getTableName(),
+                    "Owner", sender, amount, "SUB");
             //Actualizar el saldo de la cuenta de ahorro en el objeto cliente
             Model.getInstance().getClient().savingsAccountProperty().get().setBalance(Model.getInstance().getDatabaseDriver().getSavingsAccountBalance(DBTableNames.SAVINGS_ACCOUNTS.getTableName(),
                     "Owner", sender));
-                        Model.getInstance().getDatabaseDriver().newTransaction(DBTableNames.TRANSACTIONS.getTableName(), DBTableColumns.TRANSACTIONS.getColumns(), sender, receiver, amount, message);
+            Model.getInstance().getDatabaseDriver().newTransaction(DBTableNames.TRANSACTIONS.getTableName(), DBTableColumns.TRANSACTIONS.getColumns(), sender, receiver, amount, message);
             payee_fld.setText("");
             amount_fld.setText("");
             message_fld.setText("");

@@ -13,10 +13,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="750.0" prefWidth="869.0" styleClass="dashboard"
-            stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.jmc.appbanckjavafx.Controllers.Client.DashboardController">
+<AnchorPane prefHeight="750.0" prefWidth="869.0" styleClass="dashboard" stylesheets="@../../Styles/Dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jmc.appbanckjavafx.Controllers.Client.DashboardController">
    <children>
       <Text fx:id="user_name" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="user_name" text="Brayan Díaz" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="30.0" />
       <Label fx:id="login_date" styleClass="date_lbl" text="martes, 23 de enero de 2024" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="27.0" />
@@ -45,7 +42,7 @@
                   <Label fx:id="savings_acc_num" layoutX="158.0" layoutY="118.0" styleClass="account_number" text="\$45550" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="138.0" />
                   <VBox layoutX="187.0" layoutY="-26.0" prefHeight="100.0" prefWidth="35.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="14.0" />
                   <FontAwesomeIconView glyphName="BANK" layoutX="264.0" layoutY="29.0" size="30" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="7.0" />
-                  <Text layoutX="14.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Guardar cuenta" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
+                  <Text layoutX="14.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta de ahorro" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" />
                </children>
                <styleClass>
                   <String fx:value="account" />
@@ -68,7 +65,7 @@
          </children>
       </VBox>
       <Text layoutX="30.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="última transacción" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="340.0" />
-      <Text layoutX="30.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Enviar fondos" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="340.0" />
+      <Text layoutX="590.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="section_title" text="Transferir fondos" AnchorPane.rightAnchor="235.048828125" AnchorPane.topAnchor="339.4000005722046" />
       <ListView fx:id="transaction_listview" layoutX="20.0" layoutY="378.0" prefHeight="370.0" prefWidth="570.0" styleClass="transactions_listview" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="20.0" />
       <VBox layoutX="822.0" layoutY="375.0" prefHeight="366.0" prefWidth="330.0" styleClass="new_trans_container" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
          <children>

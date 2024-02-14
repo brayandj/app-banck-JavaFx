@@ -1,6 +1,5 @@
 package com.jmc.appbanckjavafx;
 
-import com.jmc.appbanckjavafx.Models.DatabaseDriver;
 import com.jmc.appbanckjavafx.Models.Model;
 import javafx.application.Application;
 import javafx.stage.Stage;

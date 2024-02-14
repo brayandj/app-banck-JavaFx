@@ -2,6 +2,7 @@ package com.jmc.appbanckjavafx.Controllers;
 
 import com.jmc.appbanckjavafx.Models.Model;
 import com.jmc.appbanckjavafx.Views.AccountType;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -17,7 +18,6 @@ public class LoginController implements Initializable {
     public ChoiceBox<AccountType> acc_selector;
     public Label payee_address_lbl;
     public TextField payee_address_fld;
-    public Label password_lbl;
     public Button login_btn;
     public Label error_lbl;
     public TextField password_fld;
@@ -28,6 +28,7 @@ public class LoginController implements Initializable {
         acc_selector.setValue(Model.getInstance().getViewFactory().getLoginAccountType());
         acc_selector.valueProperty().addListener(observable -> setAcc_selector());
         login_btn.setOnAction(event -> onLogin());
+        Platform.runLater(() ->  payee_address_fld.requestFocus());
     }
 
     private void onLogin() {

@@ -19,7 +19,7 @@
             <Label fx:id="date_lbl" text="2024-01/29" />
          </children>
       </HBox>
-      <Button fx:id="delete_btn" layoutX="684.0" layoutY="13.0" mnemonicParsing="false" styleClass="delete_btn" text="Eliminar" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
+      <Button fx:id="delete_btn" layoutX="684.0" layoutY="13.0" mnemonicParsing="false" styleClass="delete_btn" text="Button" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="12.0">
          <graphic>
             <FontAwesomeIconView glyphName="WINDOW_CLOSE_ALT" size="15" />
          </graphic>

@@ -46,6 +46,12 @@
     -fx-cursor: hand;
 }
 
+
+.menu_container Button.selected {
+    -fx-background-color: #EEFFEE;
+    -fx-text-fill: #132813;
+}
+
 .menu_container Button FontAwesomeIconView {
     -fx-fill: #132A13;
 }

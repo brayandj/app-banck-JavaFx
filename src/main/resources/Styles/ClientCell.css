@@ -32,6 +32,7 @@
 .client_cell_container:hover HBox Label {
     -fx-text-fill: #FFFFFF;
 }
+
 .acc_display_lbl {
     -fx-font-family: "Calibri";
     -fx-font-weight: bold;

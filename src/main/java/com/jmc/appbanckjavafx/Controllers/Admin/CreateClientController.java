@@ -67,6 +67,7 @@ public class CreateClientController implements Initializable {
                     fName, lName, payeeAddress, password, LocalDate.now());
             error_lbl.setStyle("-fx-text-fill: blue; -fx-font-size: 1.3em; -fx-font-weight: bold;");
             error_lbl.setText("El cliente fue creado con éxito");
+            Model.getInstance().setClients();
             emptyFiels();
         }
     }

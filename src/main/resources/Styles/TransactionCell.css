@@ -4,6 +4,34 @@
     -fx-effect: dropshadow(three-pass-box, #000000, 5, 0, 0, 7);
 }
 
+.cell_container:hover {
+    -fx-background-color: linear-gradient(to right, #074715, #1d1d20);
+}
+
+.cell_container:hover > VBox {
+    -fx-background-color: linear-gradient(to right, #074715, #1d1d20);
+    -fx-background-color: transparent;
+}
+
+.cell_container:hover > VBox > .trans_amount_lbl {
+    -fx-background-color: red;
+}
+
+.cell_container:hover > .trans_amount_lbl {
+    -fx-effect: dropshadow(three-pass-box, #FFEA1A, 10, 0, 5, 5);
+    -fx-background-color: linear-gradient(to right, #074715, #FFEA1A);
+}
+
+.cell_container:hover > .trans_pAddress_lbl {
+    -fx-text-fill: #AAAAAA;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.cell_container:hover > Label {
+    -fx-background-color: linear-gradient(to right, #074715, #1d1d20);
+    -fx-background-color: transparent;
+}
+
 .trans_icon_container {
     -fx-background-color: #FFFFFF;
     -fx-alignment: center;
@@ -35,6 +63,7 @@
 .message_btn:hover {
     -fx-cursor: hand;
 }
+
 .trans_amount_lbl {
     /*-fx-background-color: #132A13;*/
     -fx-background-color: linear-gradient(to right, #074715, #1d1d20);

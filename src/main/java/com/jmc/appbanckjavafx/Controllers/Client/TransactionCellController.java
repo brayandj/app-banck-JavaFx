@@ -52,8 +52,8 @@ public class TransactionCellController implements Initializable {
             in_icon.setFill(Color.rgb(240, 240, 240));
             out_icon.setFill(Color.RED);
         } else {
-            in_icon.setFill(Color.GREEN);
             out_icon.setFill(Color.rgb(240, 240, 240));
+            in_icon.setFill(Color.GREEN);
         }
     }
 }

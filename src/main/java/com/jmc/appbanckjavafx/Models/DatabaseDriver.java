@@ -78,8 +78,9 @@ public class DatabaseDriver {
                 newBalance = resultSet.getDouble("Balance") + amount;
                 update("UPDATE " + tableName + " SET Balance = ?" + " WHERE " + columnName + "= ?",newBalance, pAddress);
             } else {
-                if (resultSet.getDouble("Balance") > amount) {
-                    newBalance = resultSet.getDouble("Balance") + amount;
+                if (resultSet.getDouble("Balance") >= amount) {
+                    System.out.println(resultSet.getDouble("Balance"));
+                    newBalance = resultSet.getDouble("Balance") - amount;
                     update("UPDATE " + tableName + " SET Balance = ?" + " WHERE " + columnName + "= ?", newBalance, pAddress);
                 }
             }

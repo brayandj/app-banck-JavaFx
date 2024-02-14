@@ -14,7 +14,7 @@ public class Model {
     //Admind Data section
     private final Client client;
     private boolean clientLoginSuccessFlag;
-    private final ObservableList<Transaction> latesTransactions;
+    private final ObservableList<Transaction> latestTransactions;
     private final ObservableList<Transaction> allTransactions;
     //Admin Data Section
     private boolean adminLoginSuccessFlag;
@@ -22,11 +22,12 @@ public class Model {
     private Model() {
         this.viewFactory = new ViewFactory();
         this.databaseDriver = new DatabaseDriver();
+        //Sección Cliente
         this.clientLoginSuccessFlag = false;
         this.client = new Client("", "", "", null, null, null);
-        this.latesTransactions = FXCollections.observableArrayList();
+        this.latestTransactions = FXCollections.observableArrayList();
         this.allTransactions = FXCollections.observableArrayList();
-        //Admin Data Section
+        //Sección Admin
         this.adminLoginSuccessFlag = false;
         this.clients = FXCollections.observableArrayList();
     }
@@ -109,8 +110,8 @@ public class Model {
     public void setAllTransactions() {
         prepareTransactions(this.allTransactions, -1);
     }
-    public void setLatesTransactions() {
-        prepareTransactions(this.latesTransactions, -1);
+    public void setLatestTransactions() {
+        prepareTransactions(this.latestTransactions, -1);
     }
     public boolean getAdminLoginSuccessFlag() {
         return adminLoginSuccessFlag;
@@ -131,8 +132,8 @@ public class Model {
         }
     }
 
-    public ObservableList<Transaction> getLatesTransactions() {
-        return latesTransactions;
+    public ObservableList<Transaction> getLatestTransactions() {
+        return latestTransactions;
     }
 
     public ObservableList<Transaction> getAllTransactions() {
@@ -181,7 +182,7 @@ public class Model {
     }
 
     /*
-    *Utility Methods Section
+    *Sección de Métodos Utilitarios
      */
 
     public CheckingAccount getCheckingAccount(String pAddress) {
